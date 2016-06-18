@@ -64,7 +64,8 @@ package.json 참고
 		```html
 		<img src='images/01.jpg'/>
 		```
-	- css파일 기준  
+
+	- css파일 기준
 		```css
 		div{background-image:url(../images/01.jpg)}
 		```
