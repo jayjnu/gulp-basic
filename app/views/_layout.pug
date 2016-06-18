@@ -1,11 +1,27 @@
+- var pageInfo = {author:{name:'정진우', email:'doublejnu@gmail.com'}, template:'Pug(구 jade)'};
+- var menu = ["Home", "About", "Works", "Contact"];
 doctype html
 html
 	head
 		block meta
 			meta(charset='utf-8')
 		block title
-			title 샘플
+			title #{pageInfo.author.name}의 #{pageInfo.template} 테스트
 		block modules
 	body
 		block content
-			div#wrap 머지
+			div#wrap
+				block header
+					header#header
+						h1 Gulpfile.js for SASS
+						nav#gnb
+							ul
+								each val in menu
+									li= val
+				block main
+					main#cont_main
+
+				block footer
+					footer#footer
+						h2 꼬리말 영역
+						div.wrap_copyright Copyleft &copy; #{pageInfo.author.name}, email: #{pageInfo.author.email}. Free to use under MIT license

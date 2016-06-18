@@ -11,13 +11,13 @@ const pug = require('gulp-pug');
 /*기본적인 자동화 Task 관리
 * 1. Sass watching과 compiling
 * 2. ES6 compiling to javascript and compressing
-* 3. pug compiling to html np
+* 3. pug compiling to html
 * */
 
 const dir = {
-	js:{src:path.join(__dirname, 'app/js/*.js'), dest:path.join(__dirname, 'build/js')},
-	css:{src:path.join(__dirname, 'app/css/*.scss'), dest:path.join(__dirname, 'build/css')},
-	pug:{src:path.join(__dirname, 'app/views'), dest:path.join(__dirname, 'build/')},
+	js:{src:path.join(__dirname, 'app/js/**/*.js'), dest:path.join(__dirname, 'build/js')},
+	css:{src:path.join(__dirname, 'app/css/**/*.scss'), dest:path.join(__dirname, 'build/css')},
+	pug:{src:path.join(__dirname, 'app/views/**/*.pug'), dest:path.join(__dirname, 'build/')},
 	build:path.join(__dirname, 'build/**/*')
 };
 
@@ -28,13 +28,17 @@ gulp.task('browser-sync', function(){
 
 	gulp.watch(dir.js.src,['javascript']);
 	gulp.watch(dir.css.src,['scss']);
-	gulp.watch(path.join(dir.pug.src,'*.pug'), ['pug']);
+	gulp.watch(dir.pug.src,['pug']);
 
 	browserSync.watch(dir.build).on('change', browserSync.reload);
 });
 
 gulp.task('javascript', function(){
-	return gulp.src(dir.js.src)
+	var src = dir.js.src;
+	var extension = "!" + src.replace('*.js', '_*.js');
+	var module = "!" + src.replace('*.js', '*.min.js');
+
+	return gulp.src([src, extension, module])
 			.pipe(babel({
 				presets:['es2015']
 			}))
@@ -43,16 +47,19 @@ gulp.task('javascript', function(){
 });
 
 gulp.task('scss', function(){
-	return gulp.src(dir.css.src)
+	var src = dir.css.src;
+	var extension = "!" + src.replace('*.scss', '_*.scss');
+	var module = "!" + src.replace('*.scss', '*.min.scss');
+
+	return gulp.src([src, extension, module])
 			.pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
 			.pipe(gulp.dest(dir.css.dest));
 });
 
 gulp.task('pug', function(){
 	var src = dir.pug.src;
-	var included = path.join(src, '*.pug'),
-		excluded = "!" + path.join(src, '_*.pug');
-	return gulp.src([included, excluded])
+	var excluded = "!" + src.replace('*.pug', '_*.pug');
+	return gulp.src([src, excluded])
 			.pipe(plumber())
 			.pipe(pug({pretty:'\t'}))
 			.pipe(plumber.stop())
