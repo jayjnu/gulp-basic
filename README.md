@@ -11,6 +11,11 @@
 	$ npm install gulp -g
 	```
 
+1. 해당 폴더로 이동하기
+	```CLI
+	$ cd <gulp-basic 디렉토리>
+	```
+
 1. 모듈 다운받기
 	```CLI
 	$ npm install
