@@ -5,4 +5,14 @@
 console.log('Hello World!?');
 var arr = ['J', 'U', 'N', 'G'];
 
-arr.forEach((el) => {console.log(el)});
+
+class Shape {
+	constructor (id, x, y) {
+		this.id = id;
+		this.move(x, y);
+	}
+	move (x, y) {
+		this.x = x;
+		this.y = y;
+	}
+}
