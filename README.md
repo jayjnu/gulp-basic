@@ -52,6 +52,9 @@ package.json 참고
 }
 ```
 
+## 이미지 파일
+build/images 폴더에 넣기
+
 ## 추후 추가사항
 1. NPM을 이용한 frontend module 사용을 극대화 할 수 잇는 Task managing tool 추가
 	- 후보: browserify
