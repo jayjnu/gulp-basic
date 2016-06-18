@@ -53,7 +53,16 @@ package.json 참고
 ```
 
 ## 이미지 파일
-build/images 폴더에 넣기
+1. 파일 위치: build/images 폴더에 넣기
+2. 경로 설정
+	- html파일 기준
+		```html
+		<img src='images/01.jpg'/>
+		```
+	- css파일 기준
+		```css
+		div{background-image:url(../images/01.jpg)}
+		```
 
 ## 추후 추가사항
 1. NPM을 이용한 frontend module 사용을 극대화 할 수 잇는 Task managing tool 추가
