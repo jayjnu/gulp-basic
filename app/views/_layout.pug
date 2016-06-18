@@ -1,5 +1,5 @@
 - var pageInfo = {author:{name:'정진우', email:'doublejnu@gmail.com'}, template:'Pug(구 jade)'};
-- var menu = ["Home", "About", "Works", "Contact"];
+- var menu = ["Getting Started", "Dependencies", "Further Updates", "Contact"];
 doctype html
 html
 	head
@@ -8,16 +8,19 @@ html
 		block title
 			title #{pageInfo.author.name}의 #{pageInfo.template} 테스트
 		block modules
+			script(src='js/myModule.js')
 	body
 		block content
 			div#wrap
 				block header
 					header#header
-						h1 Gulpfile.js for SASS
+						h1 Gulpfile.js for SASS, ECMAScript 6, Pug
 						nav#gnb
 							ul
 								each val in menu
-									li= val
+									li
+										- var url = val.toLowerCase();
+										a(href=url + ".html")=val
 				block main
 					main#cont_main
 

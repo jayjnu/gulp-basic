@@ -1,14 +1,31 @@
 @charset "utf-8";
 
 @import '_reset';
-$width:600;
-$height:100;
+$width:600px;
+$height:100px;
+$scheme1: red;
+$scheme2: #333;
+$scheme3: dark-red;
 
-h1{background-color: red}
+/* 추가 */
+a:link, a:visited{color:$scheme2}
+a:hover, a:active{color:$scheme1}
+
+
+body{font: normal normal 14px/1.5 'Gulim', sans-serif;}
 
 #wrap{
-  width:$width + px;
-  height:$width + $height + px;
-  margin:0 auto 20px;
-  border:1px solid red;
+  width:$width ;
+  height:$width + $height;
+  padding:30px;
+  margin:20px auto;
+  box-shadow:5px 5px 10px rgba(0,0,0,0.5);
 }
+
+h1{
+  line-height:40px;
+  border:{bottom:3px solid red;left:9px solid red;}
+  text-indent: 10px;
+  font:{size:1.5em;weight:700}
+}
+

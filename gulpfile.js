@@ -15,9 +15,21 @@ const pug = require('gulp-pug');
 * */
 
 const dir = {
-	js:{src:path.join(__dirname, 'app/js/**/*.js'), dest:path.join(__dirname, 'build/js')},
-	css:{src:path.join(__dirname, 'app/css/**/*.scss'), dest:path.join(__dirname, 'build/css')},
-	pug:{src:path.join(__dirname, 'app/views/**/*.pug'), dest:path.join(__dirname, 'build/')},
+	js:{
+		rel:'app/js/**/*.js',
+		src:path.join(__dirname, 'app/js/**/*.js'),
+		dest:path.join(__dirname, 'build/js')
+	},
+	css:{
+		rel:'app/css/**/*.scss',
+		src:path.join(__dirname, 'app/css/**/*.scss'),
+		dest:path.join(__dirname, 'build/css')
+	},
+	pug:{
+		rel:'app/views/**/*.pug',
+		src:path.join(__dirname, 'app/views/**/*.pug'),
+		dest:path.join(__dirname, 'build/')
+	},
 	build:path.join(__dirname, 'build/**/*')
 };
 
@@ -26,9 +38,9 @@ gulp.task('browser-sync', function(){
 		server:'./build'
 	});
 
-	gulp.watch(dir.js.src,['javascript']);
-	gulp.watch(dir.css.src,['scss']);
-	gulp.watch(dir.pug.src,['pug']);
+	gulp.watch(dir.js.rel,['javascript']);
+	gulp.watch(dir.css.rel,['scss']);
+	gulp.watch(dir.pug.rel,['pug']);
 
 	browserSync.watch(dir.build).on('change', browserSync.reload);
 });
