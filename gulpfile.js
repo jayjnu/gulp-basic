@@ -51,9 +51,11 @@ gulp.task('javascript', function(){
 	var module = "!" + src.replace('*.js', '*.min.js');
 
 	return gulp.src([src, extension, module])
+			.pipe(plumber())
 			.pipe(babel({
 				presets:['es2015']
 			}))
+			.pipe(plumber.stop())
 			.pipe(uglify())
 			.pipe(gulp.dest(dir.js.dest));
 });

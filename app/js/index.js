@@ -3,3 +3,6 @@
  */
 'use strict';
 console.log('Hello World!?');
+var arr = ['J', 'U', 'N', 'G'];
+
+arr.forEach((el) => {console.log(el)});
