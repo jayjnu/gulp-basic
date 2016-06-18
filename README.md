@@ -28,7 +28,6 @@
   - css: scss 개발용 폴더
   - js: script 개발용 폴더
   - views: pug template engine을 이용한 html 제작 폴더
-
 - ./build: 결과물로 컴파일 되서 나오는 폴더
 
 
