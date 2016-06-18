@@ -61,7 +61,7 @@ package.json 참고
 1. 파일 위치: build/images 폴더에 넣기
 2. 경로 설정
 	- html파일 기준
-		```html
+		```html  
 		<img src='images/01.jpg'/>
 		```
 	- css파일 기준
