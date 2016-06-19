@@ -59,7 +59,7 @@ package.json 참고
 
 ## 이미지 파일
 1. 파일 위치: build/images 폴더에 넣기
-2. 경로 설정
+1. 경로 설정
 	- html파일 기준
 		```html
 		<img src='images/01.jpg'/>
@@ -70,7 +70,85 @@ package.json 참고
 		div{background-image:url(../images/01.jpg)}
 		```
 
+
+
+## Bower 설치
+1. Bower란?
+
+	> 참고: http://vnthf.github.io/blog/bower/
+
+1. 설치
+
+	```CLI
+	$ npm install bower -g
+	```
+
+1. bower 프로젝트 시작 - bower.json 만들기 (package.json과 거의 같은 개념)
+
+	```CLI
+	$ cd <본인 프로젝트 경로: 예) gulp-basic>
+	$ bower init
+	$ 아래 나오는 설정들은 본인이 알아서 설정
+	```
+
+	- 만들어진 bower.json
+
+	```json
+	{
+		"name": "입력 프로젝트명",
+		"description": "automated compiling tasks for frontend development",
+		"main": "app.js",
+		"authors": ["https://github.com/jayjnu"],
+		"license": "MIT",
+		"keywords": [
+			"gulp",
+			"sass",
+			"pug",
+		"es6"
+		],
+		"homepage": "https://github.com/jayjnu/gulp-basic",
+		"private": true
+	}
+	```
+
+1. frontend library 받기 예) jquery, bootstrap
+
+	```CLI
+	(프로젝트 폴더로 이동)
+	$ bower install jquery --save
+	$ bower install bootstrap --save
+	```
+
+## bower-installer 설치
+1. bower-installer란?
+
+	> bower를 통해 설치한 라이브러리는 현재 프로젝트 **./bower_components** 폴더에 저장되므로 경로관리가 불편한 단점이 있다.
+	> bower-installer를 설치하고 미리 저장될 경로를 설정하면 원하는 폴더로 라이브러리를 바로 보낼 수 있다.
+
+1. bower-installer 설치하기
+
+	```CLI
+	$ npm install bower-installer -g
+	```
+
+1. bower.json 수정하기 - 다음의 항목을 상위 목록에 추가
+
+	```json
+	{
+		"install":{
+			"css":"app/css", // css관련 라이브러리가 저장될 경로 설정
+			"js":"app/js" // javascript 관련 라이브러리가 저장될 경로 설정
+		}
+	}
+	```
+
+1. bower-installer 실행하기
+
+	```CLI
+	$ bower-installer
+	```
+
+1. app/css 경로에 생긴 파일 확인
+
 ## 추후 추가사항
-1. NPM을 이용한 frontend module 사용을 극대화 할 수 잇는 Task managing tool 추가
-	- 후보: browserify
 1. ExpressJS, MongoDB task 추가
