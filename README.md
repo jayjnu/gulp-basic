@@ -39,7 +39,7 @@
 ## 개발, 프로덕트 의존성
 package.json 참고
 
-```json
+```javascript
 {
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
@@ -93,7 +93,7 @@ package.json 참고
 
 	- 만들어진 bower.json
 
-	```json
+	```javascript
 	{
 		"name": "입력 프로젝트명",
 		"description": "automated compiling tasks for frontend development",
@@ -133,7 +133,7 @@ package.json 참고
 
 1. bower.json 수정하기 - 다음의 항목을 상위 목록에 추가
 
-	```json
+	```javascript
 	{
 		"install":{
 			"css":"app/css", // css관련 라이브러리가 저장될 경로 설정
