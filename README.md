@@ -104,7 +104,7 @@ package.json 참고
 			"gulp",
 			"sass",
 			"pug",
-		"es6"
+			"es6"
 		],
 		"homepage": "https://github.com/jayjnu/gulp-basic",
 		"private": true
@@ -131,14 +131,12 @@ package.json 참고
 	$ npm install bower-installer -g
 	```
 
-1. bower.json 수정하기 - 다음의 항목을 상위 목록에 추가
+1. bower.json 수정하기 - 다음의 항목을 추가
 
 	```javascript
-	{
-		"install":{
-			"css":"app/css", // css관련 라이브러리가 저장될 경로 설정
-			"js":"app/js" // javascript 관련 라이브러리가 저장될 경로 설정
-		}
+	"install":{
+		"css":"app/css", // css관련 라이브러리가 저장될 경로 설정
+		"js":"app/js" // javascript 관련 라이브러리가 저장될 경로 설정
 	}
 	```
 
