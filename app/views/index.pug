@@ -5,7 +5,9 @@ block modules
 block main
 	main.cont_main
 		section.sec_visual
-			h2.tit_visual 개발을 더 편하게 해보자
+			- var now = new Date().getDay();
+			- var days = ['일','월', '화', '수', '목', '금', '토'];
+			h2.tit_visual  오늘은 #{days[now]}요일
 		artice#mArticle.cont_main
 			h2.ir_pm 본문 영역
 			p Hello <span style="color:gold">World</span>

@@ -81,7 +81,7 @@ gulp.task('pug', function(){
 });
 
 gulp.task('clean:build', function(){
-	return del.sync(['build/**/*', '!build/images']);
+	return del.sync(['build/**/*', '!build/images', '!build/images/**/*']);
 });
 
 gulp.task('default', ['clean:build', 'javascript', 'scss', 'pug', 'browser-sync'],function(){
