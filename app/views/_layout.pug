@@ -15,11 +15,11 @@ html
 					header#header
 						h1 Gulpfile.js for SASS, ECMAScript 6, Pug
 						nav#gnb
-							ul
+							ul.list_gnb
 								each val in menu
 									li
-										- var url = val.toLowerCase();
-										a(href=url + ".html")=val
+										- var url = val.toLowerCase().replace(' ', '');
+										a.link_gnb(href=url + ".html")=val
 				block main
 					main#cont_main
 

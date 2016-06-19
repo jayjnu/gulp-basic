@@ -1,6 +1,6 @@
 {
-  "name": "gulp-express",
-  "version": "1.0.0",
+  "name": "gulp-basic",
+  "version": "1.0.1",
   "description": "automated compling tasks for frontend development",
   "main": "index.js",
   "scripts": {

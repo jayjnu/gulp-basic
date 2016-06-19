@@ -3,16 +3,8 @@
  */
 'use strict';
 console.log('Hello World!?');
-var arr = ['J', 'U', 'N', 'G'];
+window.onload = function(){
+	var msg_visual = ['Gulpfile을 이용해서', '편하게 개발하자', '템플릿 엔진을 써보자', '써보면 재밌다.'];
+	
+};
 
-
-class Shape {
-	constructor (id, x, y) {
-		this.id = id;
-		this.move(x, y);
-	}
-	move (x, y) {
-		this.x = x;
-		this.y = y;
-	}
-}

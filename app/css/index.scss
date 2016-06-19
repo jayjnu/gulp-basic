@@ -3,29 +3,57 @@
 @import '_reset';
 $width:600px;
 $height:100px;
-$scheme1: red;
+$scheme1: #ea4b4c;
 $scheme2: #333;
-$scheme3: dark-red;
+$scheme3: darkred;
 
 /* 추가 */
-a:link, a:visited{color:$scheme2}
-a:hover, a:active{color:$scheme1}
+a:link, a:visited{color:$scheme2;text-decoration:none}
+a:hover, a:active{}
 
-
-body{font: normal normal 14px/1.5 'Gulim', sans-serif;}
+body{font: normal normal 14px/1.5 Helvetica, 'Gulim', sans-serif;}
 
 #wrap{
   width:$width ;
   height:$width + $height;
   padding:30px;
   margin:20px auto;
-  box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+  box-shadow:5px 5px 15px rgba(0,0,0,0.5);
 }
 
 h1{
   line-height:40px;
-  border:{bottom:3px solid red;left:9px solid red;}
+  border-left:9px solid $scheme1;
   text-indent: 10px;
   font:{size:1.5em;weight:700}
 }
 
+.list_gnb{
+  overflow:hidden;
+  background-color:$scheme1;
+  li{float:left;width:$width/4}
+  .link_gnb{
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    display:block;
+    &:hover{background-color:$scheme3;color:#fff}
+  }
+}
+
+.cont_main .sec_visual{
+  width:$width;
+  height:$width*4/6;
+  background:url(../images/visual.png) no-repeat 0 0;
+  background-size:100% 100%;
+  position:relative;
+}
+.cont_main .sec_visual .tit_visual{
+  color:#fff;
+  position:absolute;
+  left:300px; top:300px;
+  font:{size:1.5em;weight:700;style:italic}
+  text-shadow:0 0 10px rgba(0,0,0,0.5);
+  transform: rotateY(-50deg) rotateZ(-10deg);
+
+}

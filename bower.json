@@ -1,0 +1,33 @@
+{
+  "name": "gulp-basic",
+  "description": "automated compiling tasks for frontend development",
+  "main": "app.js",
+  "authors": [
+    "https://github.com/jayjnu"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "sass",
+    "pug",
+    "es6"
+  ],
+  "homepage": "https://github.com/jayjnu/gulp-basic",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "install":{
+    "path": {
+      "css": "app/css",
+      "js": "app/js"
+    }
+  }
+}
