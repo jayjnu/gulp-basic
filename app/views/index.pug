@@ -1,5 +1,5 @@
 extends ./_layout.pug
-block modules
+block append modules
 	link(href='css/index.css' rel='stylesheet' type='text/css')
 	script(src='js/index.js')
 block main
@@ -8,6 +8,6 @@ block main
 			- var now = new Date().getDay();
 			- var days = ['일','월', '화', '수', '목', '금', '토'];
 			h2.tit_visual  오늘은 #{days[now]}요일
-		artice#mArticle.cont_main
+		article#mArticle.main_article
 			h2.ir_pm 본문 영역
-			p Hello <span style="color:gold">World</span>
+			p.desc_article Start Gulp

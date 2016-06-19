@@ -8,6 +8,7 @@ html
 		block title
 			title #{pageInfo.author.name}의 #{pageInfo.template} 테스트
 		block modules
+			script(src='js/jquery/jquery.js')
 	body
 		block content
 			div#wrap
@@ -24,6 +25,6 @@ html
 					main#cont_main
 
 				block footer
-					footer#footer
-						h2 꼬리말 영역
-						div.wrap_copyright Copyleft &copy; #{pageInfo.author.name}, email: #{pageInfo.author.email}. Free to use under MIT license
+					footer#footer.wrap_foot
+						h2.ir_pm 꼬리말 영역
+						p.desc_copyright Copyleft &copy; #{pageInfo.author.name}, email: #{pageInfo.author.email}. Free to use under MIT license

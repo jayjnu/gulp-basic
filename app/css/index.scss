@@ -15,7 +15,6 @@ body{font: normal normal 14px/1.5 Helvetica, 'Gulim', sans-serif;}
 
 #wrap{
   width:$width ;
-  height:$width + $height;
   padding:30px;
   margin:20px auto;
   box-shadow:5px 5px 15px rgba(0,0,0,0.5);
@@ -55,5 +54,28 @@ h1{
   font:{size:1.5em;weight:700;style:italic}
   text-shadow:0 0 10px rgba(0,0,0,0.5);
   transform: rotateY(-50deg) rotateZ(-10deg);
+}
+.off{opacity:0}
+.cont_main .main_article{
+  background-color: $scheme1;
 
+  .desc_article{
+    text-align:center;
+    font:{size:2em;weight:100}
+    line-height:2em;
+    color:#fff;
+    transition:opacity 0.5s;
+
+
+  }
+}
+
+.wrap_foot{
+  background-color:$scheme2;
+  .desc_copyright{
+    text-align:center;
+    font:{size:10px;}
+    color:#eee;
+    line-height:40px;
+  }
 }
