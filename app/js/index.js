@@ -55,5 +55,12 @@ $(document).ready(function(){
 	});
 });
 
+var didStart = false;
+var a = new Promise(function(resolve, reject){
+	didStart = true;
+	console.log("Promise Started");
+	setTimeout(function(){resolve(didStart);}, 5000);
+});
 
-
+a.then(function(){setTimeout( () => console.log('five seconds passed after start!'), 2000);})
+	.then(function(){console.log("i dont know what to do")});
