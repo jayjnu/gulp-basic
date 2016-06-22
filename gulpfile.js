@@ -56,7 +56,7 @@ gulp.task('javascript', function(){
 				presets:['es2015']
 			}))
 			.pipe(plumber.stop())
-			.pipe(uglify())
+			//.pipe(uglify())
 			.pipe(gulp.dest(dir.js.dest));
 });
 
