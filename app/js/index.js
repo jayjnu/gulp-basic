@@ -53,6 +53,7 @@ $(document).ready(function(){
 	evt.addListener('mArticle', 'mouseenter', function(){
 		console.log('This is working');
 	});
+
 });
 
 var didStart = false;
@@ -64,3 +65,6 @@ var a = new Promise(function(resolve, reject){
 
 a.then(function(){setTimeout( () => console.log('five seconds passed after start!'), 2000);})
 	.then(function(){console.log("i dont know what to do")});
+
+
+
