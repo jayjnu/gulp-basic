@@ -7,6 +7,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
 const pug = require('gulp-pug');
+const concat = require('gulp-concat');
 
 /*기본적인 자동화 Task 관리
 * 1. Sass watching과 compiling
@@ -57,6 +58,8 @@ gulp.task('javascript', function(){
 			}))
 			.pipe(plumber.stop())
 			//.pipe(uglify())
+			.pipe(plumber.stop())
+			.pipe(concat())
 			.pipe(gulp.dest(dir.js.dest));
 });
 
