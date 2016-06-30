@@ -1,4 +1,4 @@
-# gulpfile for SASS, ES6, and Pug
+# gulpfile for SASS, ES6
 
 ## 시작하기
 1. master branch clone받기
@@ -48,10 +48,9 @@ package.json 참고
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^3.0.3",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.3",
-    "pug": "^2.0.0-beta3"
+    "gulp-concat": "^2.6.0"
   },
   "dependencies": {}
 }
@@ -103,7 +102,6 @@ package.json 참고
 		"keywords": [
 			"gulp",
 			"sass",
-			"pug",
 			"es6"
 		],
 		"homepage": "https://github.com/jayjnu/gulp-basic",
