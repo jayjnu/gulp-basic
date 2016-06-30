@@ -59,7 +59,7 @@ gulp.task('javascript', function(){
 			.pipe(plumber.stop())
 			//.pipe(uglify())
 			.pipe(plumber.stop())
-			.pipe(concat())
+			.pipe(concat('main.js'))
 			.pipe(gulp.dest(dir.js.dest));
 });
 
