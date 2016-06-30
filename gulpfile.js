@@ -18,7 +18,7 @@ const concat = require('gulp-concat');
 const dir = {
 	js:{
 		rel:'app/js/**/*.js',
-		src:path.join(__dirname, 'app/js/**/*.js'),
+		src:[path.join(__dirname, 'app/js/jquery/*.js'), path.join(__dirname, 'app/js/listen/*js'), path.join(__dirname, 'app/js/*.js')], // 라이브러리 추가 시 수정 필요
 		dest:path.join(__dirname, 'build/js')
 	},
 	css:{
@@ -48,10 +48,10 @@ gulp.task('browser-sync', function(){
 
 gulp.task('javascript', function(){
 	var src = dir.js.src;
-	var extension = "!" + src.replace('*.js', '_*.js');
-	var module = "!" + src.replace('*.js', '*.min.js');
+	//var extension = "!" + src.replace('*.js', '_*.js');
+	//var module = "!" + src.replace('*.js', '*.min.js');
 
-	return gulp.src([src, extension, module])
+	return gulp.src(src)
 			.pipe(plumber())
 			.pipe(babel({
 				presets:['es2015']

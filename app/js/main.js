@@ -68,3 +68,5 @@ a.then(function(){setTimeout( () => console.log('five seconds passed after start
 
 
 
+
+console.log(hey('.cont_main'));
