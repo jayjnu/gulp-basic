@@ -70,7 +70,7 @@ gulp.task('html', function(){
 });
 
 gulp.task('scss', function(){
-	var src = dir.css.src;
+	var src = dir.css.src; 
 	var extension = "!" + src.replace('*.scss', '_*.scss');
 	var module = "!" + src.replace('*.scss', '*.min.scss');
 
