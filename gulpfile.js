@@ -6,7 +6,6 @@ const sass = require('gulp-sass');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
-const pug = require('gulp-pug');
 const concat = require('gulp-concat');
 
 /*기본적인 자동화 Task 관리
